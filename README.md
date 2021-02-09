@@ -4,6 +4,8 @@ Voting extension for live vide streams, such as live shows, live theaters or any
 This is the original source code that was used in the first live theatre played in 2 May 2020 in https://neu.schauspielhaus.ch/de/journal/18109/dekalog-6-gebot. About 250 people watched it live.
 
 The source code includes a websocket server written in Nodejs and an admin panel for managing voting options along with the voting buttons, that can be injected via iframe into any external webpage.
+![Screenshot 1](https://github.com/mkadirtan/live-voting/blob/main/docs/screenshot_1.jpg?raw=true)
+![Screenshot 2](https://github.com/mkadirtan/live-voting/blob/main/docs/screenshot_2.jpg?raw=true)
 
 ## Motivation
 
