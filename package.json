@@ -1,0 +1,25 @@
+{
+  "name": "live-voting",
+  "version": "1.0.0",
+  "description": "Voting extension for live vide streams, such as live shows, live theaters or any live stream.\n\n",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "mkadirtan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jQuery": "^1.7.4",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.10",
+    "pusher": "^3.0.1",
+    "ws": "^7.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

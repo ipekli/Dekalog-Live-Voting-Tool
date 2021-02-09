@@ -1,0 +1,315 @@
+.btn {
+    height: 80px;
+    width: 50%;
+    border-style: none;
+    font-size: 20px;
+    float: left;
+    -webkit-appearance: none;
+    font-family: Futura;
+}
+.approveBtn {
+    height: 80px;
+    width: 100%;
+    /*background-image: url('https://icongr.am/fontawesome/check.svg');*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    font-size: 20px;
+    -webkit-appearance: none;
+    font-family: Futura;
+}
+.btn-group button {
+    color: white; /* White text */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    -webkit-appearance: none;
+    font-family: Futura;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+/*input[type=submit]{*/
+
+/*    background-color: #000000;*/
+/*    border: none;*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    list-style-type: none;*/
+/*    margin: 0 0 0 0;*/
+/*    padding: 0;*/
+/*    position: relative;*/
+/*    width: 25%;*/
+/*    height: 80px;*/
+/*    font-family: Futura;*/
+/*    font-size: 200%;*/
+/*    -webkit-appearance: none;*/
+
+
+/*}*/
+/*input[type=submit]:active{*/
+
+/*    background-color: #FFFFFF;*/
+/*    border: none;*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*    margin: 0 0 0 0;*/
+/*    padding: 0;*/
+/*    position: relative;*/
+/*    width: 25%;*/
+/*    height: 80px;*/
+/*    font-family: Futura;*/
+/*    font-size: 200%;*/
+/*    -webkit-appearance: none;*/
+
+
+/*}*/
+
+
+/*.radio {*/
+/*    list-style-type: none;*/
+/*    margin: 0 0 0 0;*/
+/*    padding: 0;*/
+/*    border: none;*/
+/*    text-decoration: none;*/
+
+/*}*/
+
+/*.radio li {*/
+/*    float: left;*/
+/*    margin: 0 0 0 0;*/
+/*    width: 37.5%;*/
+/*    height: 80px;*/
+/*    position: relative;*/
+/*    border: none;*/
+
+/*}*/
+
+/*.radio label,*/
+/*.radio input {*/
+/*    display: block;*/
+/*    position: absolute;*/
+
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+
+
+/*    font-family: Futura;*/
+
+/*    font-size: 300%;*/
+/*    color: white;*/
+/*    background: #fddb27ff;*/
+/*    text-align: center;*/
+
+/*}*/
+
+/*.radio input[type="radio"] {*/
+/*    opacity: 0.01;*/
+/*    z-index: 100;*/
+
+
+/*}*/
+
+
+/*.radio input[type="radio"]:checked+label,*/
+/*.Checked+label {*/
+/*    font-weight: bold;*/
+/*    color: black;*/
+
+/*}*/
+
+/*.radio label {*/
+/*    padding: 5px;*/
+/*    cursor: pointer;*/
+/*    z-index: 90;*/
+
+/*}*/
+
+/*.radio2 {*/
+/*    list-style-type: none;*/
+/*    margin: 0 0 0 0;*/
+/*    padding: 0;*/
+
+/*}*/
+
+/*.radio2 li {*/
+/*    float: left;*/
+/*    margin: 0 0 0 0;*/
+/*    width: 37.5%;*/
+/*    height: 80px;*/
+/*    position: relative;*/
+
+/*}*/
+
+/*.radio2 label,*/
+/*.radio2 input {*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    font-family: Futura;*/
+/*    font-size: 300%;*/
+/*    background: #00B1D2FF;*/
+/*    color: white;*/
+/*    text-align: center;*/
+
+
+
+/*}*/
+
+/*.radio2 input[type="radio"] {*/
+/*    opacity: 0.01;*/
+/*    z-index: 100;*/
+
+
+/*}*/
+
+
+/*.radio2 input[type="radio"]:checked+label,*/
+/*.Checked+label {*/
+/*    font-weight: bold;*/
+/*    color: black;*/
+/*}*/
+
+/*.radio2 label {*/
+/*    padding: 5px;*/
+/*    cursor: pointer;*/
+/*    z-index: 90;*/
+
+/*}*/
+
+
+/*@media only screen and (max-width: 768px) {*/
+
+/*    input[type=submit] {*/
+/*        width: 25%;*/
+/*        height: 70px;*/
+/*        font-family: Futura;*/
+/*        font-size: 125%;*/
+/*    }*/
+
+/*    .radio li {*/
+/*        width: 37.5%;*/
+/*        height: 70px;*/
+/*    }*/
+/*    .radio label,*/
+/*    .radio input {*/
+/*        padding-top: 20px;*/
+/*        font-family: Futura;*/
+/*        font-size: 125%;*/
+/*        color: white;*/
+/*    }*/
+
+/*    .radio2 li {*/
+/*        width: 37.5%;*/
+/*        height: 70px;*/
+/*        position: relative;*/
+
+/*    }*/
+/*    .radio2 label,*/
+/*    .radio2 input {*/
+/*        padding-top: 20px;*/
+
+/*        font-family: Futura;*/
+/*        font-size: 125%;*/
+/*        color: white;*/
+/*    }*/
+
+/*    input[type=submit]:active{*/
+
+/*        width: 25%;*/
+/*        height: 70px;*/
+/*        font-family: Futura;*/
+/*        font-size: 125%;*/
+/*    }*/
+
+/*    }*/
+
+
+/*@media only screen and (max-width: 500px) {*/
+
+/*    input[type=submit] {*/
+/*        width: 25%;*/
+/*        height: 70px;*/
+/*        font-family: Futura;*/
+/*        font-size: 125%;*/
+/*    }*/
+
+/*    .radio li {*/
+/*        width: 37.5%;*/
+/*        height: 70px;*/
+/*    }*/
+/*    .radio label,*/
+/*    .radio input {*/
+/*        padding-top: 20px;*/
+/*        font-family: Futura;*/
+/*        font-size: 125%;*/
+/*        color: white;*/
+/*    }*/
+
+/*    .radio2 li {*/
+/*        width: 37.5%;*/
+/*        height: 70px;*/
+/*        position: relative;*/
+
+/*    }*/
+/*    .radio2 label,*/
+/*    .radio2 input {*/
+/*        padding-top: 10px;*/
+
+/*        font-family: Futura;*/
+/*        font-size: 125%;*/
+/*        color: white;*/
+/*    }*/
+
+/*    input[type=submit]:active{*/
+
+/*        width: 25%;*/
+/*        height: 70px;*/
+/*        font-family: Futura;*/
+/*        font-size: 125%;*/
+/*    }*/
+
+/*    @media only screen and (max-width: 400px) {*/
+
+
+/*        .radio2 label,*/
+/*        .radio2 input {*/
+/*            padding-top: 10px;*/
+/*            font-family: Futura;*/
+/*            font-size: 125%;*/
+/*            color: white;*/
+/*        }*/
+
+/*}*/
+
+/*@media only screen and (min-width: 410px) {*/
+
+
+/*    .radio2 label,*/
+/*    .radio2 input {*/
+/*        padding-top: 20px;*/
+/*        font-family: Futura;*/
+/*        font-size: 125%;*/
+/*        color: white;*/
+/*    }*/
+
+
+/*}*/
+
+
