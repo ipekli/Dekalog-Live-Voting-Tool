@@ -13,7 +13,7 @@ This project aims to allow theaters to stream their plays to the audience from a
 
 ## Authors
 
-Original authors of the project are github.com/mkadirtan ( Developer ), github.com/isikhi ( Developer ), github.com/dasnaar ( UX Designer ).
+Original authors of the project are [mkadirtan](github.com/mkadirtan) ( Developer ), [isikhi](github.com/isikhi) ( Developer ), [dasnaar](github.com/dasnaar) ( UX Designer ).
 
 ## License
 
