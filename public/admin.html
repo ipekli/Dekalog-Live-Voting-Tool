@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div align="center">
+<section class="container-fluid flex pt-5 pb-5 bg-dark position-relative">
+    <div class="card-group col-xl-6 col-md-6">
+        <div class="card">
+            <div id="chart" style="height: 300px; width: 95%" >
+            </div>
+        </div>
+        <button type="button" onclick="resetVotes()" class="btn btn-md btn-block mb-2 btn-primary">
+            Reset Votes
+        </button>
+        <button type="button" onclick="refreshAll()" class="btn btn-md btn-block mb-2 btn-success">
+            Refresh All
+        </button>
+        <button type="button" onclick="updateAll()" class="btn btn-md btn-block mb-2 btn-secondary">
+            Update All
+        </button>
+    </div>
+</section>
+<section class="container-fluid flex pt-5 pb-5 bg-dark position-relative">
+    <div class="col-xl-6 col-md-6">
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox" id="isEnabled">
+                            </div>
+                        </div>
+                        <label class="text-black form-control" for="isEnabled"><b>Enable Voting?</b></label>
+                        <button type="button" onclick="isEnabled()" class="btn btn-md btn-block mb-2 btn-secondary">
+                            Update
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input type="checkbox" id="timeoutEnabled">
+                            </div>
+                        </div>
+                        <label class="text-black form-control" for="timeoutEnabled"><b>Enable Timeout?</b></label>
+                        <button type="button" onclick="timeoutEnabled()" class="btn btn-md btn-block mb-2 btn-secondary">
+                            Update
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="text-white" for="timeoutSeconds">Timeout (s) :</label>
+                    <input id="timeoutSeconds" type="number" placeholder="60" class="form-control">
+                    <button type="button" onclick="timeoutSeconds()" class="btn btn-md btn-block mb-2 btn-secondary">
+                        Update
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <label class="text-white" for="voteA">Vote A: </label>
+                    <input id="voteA" type="text" placeholder="Töten" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="text-white" for="colorA">Font Color A: </label>
+                </div>
+                <div class="col">
+                    <input type="text" id="colorA" class="form-control" placeholder="#000000" onkeydown="" onfocus="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="text-white" for="backgroundA">Background Color A: </label>
+                </div>
+                <div class="col">
+                    <input type="text" id="backgroundA" class="form-control" placeholder="#000000" onkeydown="" onfocus="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="voteA()" class="btn btn-md btn-block mb-2 btn-secondary">
+                        Update
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <label class="text-white" for="voteB">Vote B: </label>
+                    <input id="voteB" type="text" placeholder="Nicht Töten" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="text-white text-right" for="colorB">Font Color B: </label>
+                </div>
+                <div class="col">
+                    <input type="text" id="colorB" class="form-control" placeholder="#000000" onkeydown="" onfocus="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="text-white" for="backgroundB">Background Color B: </label>
+                </div>
+                <div class="col">
+                    <input type="text" id="backgroundB" class="form-control" placeholder="#000000" onkeydown="" onfocus="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="voteB()" class="btn btn-md btn-block mb-2 btn-secondary">
+                        Update
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button type="button" onclick="hardReset()" class="btn btn-md btn-block mb-2 btn-danger">
+            Hard Reset
+        </button>
+    </div>
+</section>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+<script src="admin.js"></script>
+</body>
+</html>
