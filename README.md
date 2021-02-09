@@ -11,6 +11,10 @@ The source code includes a websocket server written in Nodejs and an admin panel
 
 This project aims to allow theaters to stream their plays to the audience from all around the globe, and allow theaters to interact with their audience in ways that was not possible before.
 
+## Contribution
+
+[dasnaar](github.com/dasnaar) is the maintainer of this project and he will be publishing contribution guidelines along with project documentation. This repository is intended to be forked and modified, however remain as is to provide a snapshot of the state for the projects initial release.
+
 ## Authors
 
 Original authors of the project are [mkadirtan](github.com/mkadirtan) ( Developer ), [isikhi](github.com/isikhi) ( Developer ), [dasnaar](github.com/dasnaar) ( UX Designer ).
