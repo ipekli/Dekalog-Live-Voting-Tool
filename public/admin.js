@@ -2,11 +2,11 @@ let chart;
 
 let ws;
 function connectws(){
-    ws = new WebSocket("wss://ipek.li/wss");
+    ws = new WebSocket("ws://ipek.li/wss");
     ws.onopen = () => {
         ws.send(JSON.stringify({
             type: "authenticate",
-            "payload": {"pass": "SecretPass!"}
+            "payload": {"pass": "SecretPass!."}
         }));
         ws.onmessage = m => {
             let _state, _votes;
@@ -81,7 +81,7 @@ function send(update){
     ws.send(JSON.stringify({
         type: "admin",
         "payload": {
-            "pass":"SecretPass!",
+            "pass":"SecretPass!.",
             "update": {
                 "payload": update
             }
@@ -170,7 +170,7 @@ function resetVotes(){
     ws.send(JSON.stringify({
         type: "admin",
         "payload": {
-            "pass": "SecretPass!",
+            "pass": "SecretPass!.",
             "votes": {
                 "buttonFirst": 0,
                 "buttonSecond": 0
@@ -187,7 +187,7 @@ function hardReset(){
     ws.send(JSON.stringify({
         type: "hardReset",
         "payload": {
-            "pass": "SecretPass!",
+            "pass": "SecretPass!.",
         }
     }))
 }
