@@ -2,7 +2,7 @@ const ws = require('ws');
 const crypto = require('crypto');
 const _ = require('lodash');
 const requestIdentity = { "type": "getIdentity", "payload": "" };
-
+const constants = require('./constants');
 let connections = [];
 let admin = undefined;
 
@@ -42,7 +42,6 @@ function findDuplicate(identity) {
 }
 
 function updateAdmin(){
-    console.log("updateAdmin");
     if(admin && admin.readyState === ws.OPEN) {
         admin.send(JSON.stringify({
             type: "update",
@@ -79,7 +78,7 @@ function messageHandler(client) {
         }
 
         if(type === "authenticate") {
-            if(payload && payload.pass === "ChoreogrApp") {
+            if(payload && payload.pass === constants.ADMIN_PASSWORD) {
                 admin = client;
                 updateAdmin();
             }
@@ -97,7 +96,7 @@ function messageHandler(client) {
         }
 
         if(type === "admin") {
-            if(payload && payload.pass === "ChoreogrApp") {
+            if(payload && payload.pass === constants.ADMIN_PASSWORD) {
                 if(payload.update){
                     let update = payload.update;
                     state = _.merge(state, update);
@@ -111,7 +110,7 @@ function messageHandler(client) {
         }
 
         if(type === "hardReset") {
-            if(payload && payload.pass === "ChoreogrApp") {
+            if(payload && payload.pass === constants.ADMIN_PASSWORD) {
                 connections = [];
                 admin = client;
             }
