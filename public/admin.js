@@ -2,7 +2,7 @@ let chart;
 
 let ws;
 function connectws(){
-    ws = new WebSocket("wss://domain.com/wss");
+    ws = new WebSocket("ws://ipek.li/ws");
     ws.onopen = () => {
         ws.send(JSON.stringify({
             type: "authenticate",
