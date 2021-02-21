@@ -62,7 +62,7 @@ WebSocketClient.prototype.onmessage = function(data,flags,number){	console.log("
 WebSocketClient.prototype.onerror = function(e){	console.log("WebSocketClient: error",arguments);	};
 WebSocketClient.prototype.onclose = function(e){	console.log("WebSocketClient: closed",arguments);	};
 
-let ws = new WebSocketClient("ws://ipek.li/wss");
+let ws = new WebSocketClient("wss://ipek.li/wss");
 
 
 ws.onmessage = event => {
