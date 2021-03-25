@@ -6,6 +6,7 @@ const port = 3000;
 const WebSocket = require('ws');
 const wsevents = require('./wsevents');
 
+/** * The socket connection will be opened in 3001 port. */
 const wss = new WebSocket.Server({port: 3001, path: "/wss"});
 wsevents.register(wss);
 

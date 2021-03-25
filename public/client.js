@@ -1,9 +1,15 @@
+/** * Here the client side is regulated. The work flow from the client side is as follows
+    * Set up the WebSocket connection, if it brokes, try it again.
+    * When a new state comes from admin side, make the required changes
+    * Send the information what client clicks as answer to the admin panel */
+
 let types = {
   getIdentity: 'getIdentity',
   setIdentity: 'setIdentity',
   information: 'information',
   state: 'state',
 };
+
 
 function WebSocketClient(url){
   this.number = 0;	// Message number
@@ -62,6 +68,9 @@ WebSocketClient.prototype.onmessage = function(data,flags,number){	console.log("
 WebSocketClient.prototype.onerror = function(e){	console.log("WebSocketClient: error",arguments);	};
 WebSocketClient.prototype.onclose = function(e){	console.log("WebSocketClient: closed",arguments);	};
 
+/** * This function defines the URL of the server. Change it with yours.
+    * ws://url.com/wss */
+
 let ws = new WebSocketClient("ws://ipek.li/wss");
 
 
@@ -91,8 +100,16 @@ function setIdentity(value) {
   return localStorage.setItem('identity', value)
 }
 
+/** * buttonFirst and buttonSecond are the butons which will shown
+ * in index.html */
+
 const buttonFirst = document.getElementById('buttonFirst');
 const buttonSecond = document.getElementById('buttonSecond');
+
+/** * buttonApprove is used for a feedback after the vote input.
+ * After the client has voted, it will appear "Stimme gezählt - Your vote is counted".
+ * It can be enabled/disabled in the admin. */
+
 const buttonApprove = document.getElementById('buttonApprove');
 
 let overAllButtonProperties = {
@@ -101,18 +118,22 @@ let overAllButtonProperties = {
   clickIntervalIsActive: false,
 };
 
+/** * Vote for buttonFirst when clicked */
+
 buttonFirst.addEventListener('click', function() {
   if(!ws || ws.readyState !== ws.OPEN) return;
-  setButtonTimeoutSettings('buttonFirst');
+  setButtonTimeoutSettings('buttonFirst'); /** * This function is not allowing the client to vote - when TimeOut is enabled. */
   ws.send(JSON.stringify({
     type: 'vote',
     payload: 'buttonFirst'
   }));
 });
 
+/** * Vote for buttonSecond when clicked */
+
 buttonSecond.addEventListener('click', function() {
   if(!ws || ws.readyState !== ws.OPEN) return;
-  setButtonTimeoutSettings('buttonSecond');
+  setButtonTimeoutSettings('buttonSecond'); /** * This function is not allowing the client to vote - when TimeOut is enabled. */
   ws.send(JSON.stringify({
     type: 'vote',
     payload: 'buttonSecond'
@@ -120,8 +141,12 @@ buttonSecond.addEventListener('click', function() {
 });
 
 function setButtonTimeoutSettings(event) {
+  /** * If admin disabled the voting function, the buttons will not be shown. */
+
   buttonFirst.hidden = overAllButtonProperties.disabled;
   buttonSecond.hidden = overAllButtonProperties.disabled;
+
+  /** * If admin enabled the voting function, the buttons will be shown. */
   if(overAllButtonProperties.clickInterval && event && overAllButtonProperties.clickIntervalIsActive) {
     buttonFirst.hidden = true;
     buttonSecond.hidden = true;
@@ -162,11 +187,13 @@ function setButtonProperties(payload) {
     }
   }
   if(typeof payload.isEnabled !== "undefined"){
-    overAllButtonProperties.disabled = !payload.isEnabled;
-    if(typeof payload.timeoutEnabled !== "undefined" && payload.timeoutSeconds) {
+    overAllButtonProperties.disabled = !payload.isEnabled; /** * When this part is true, the buttons will be hidden. */
+    if(typeof payload.timeoutEnabled !== "undefined" && payload.timeoutSeconds) { /** * When the TimeOut is enabled (clickIntervalIsActive) take the
+     * given time and duplicate with *1000 (because millisecond)
+     */
       overAllButtonProperties.clickIntervalIsActive = payload.timeoutEnabled;
       overAllButtonProperties.clickInterval = parseInt(payload.timeoutSeconds, 10) * 1000
-    }
+    } 
     setButtonTimeoutSettings()
   }
 }

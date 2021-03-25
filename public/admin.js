@@ -1,7 +1,12 @@
-let chart;
+let chart; /** * This is for the chart in admin panel */
 
+/** * This function opens the socket connection. */
 let ws;
+
+/** * This function defines the user as admin. */
 function connectws(){
+    /** * This function defines the URL of the server. Change it with yours.
+         * ws://url.com/wss */
     ws = new WebSocket("ws://ipek.li/wss");
     ws.onopen = () => {
         ws.send(JSON.stringify({
