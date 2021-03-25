@@ -7,7 +7,7 @@ let ws;
 function connectws(){
     /** * This function defines the URL of the server. Change it with yours.
          * ws://url.com/wss */
-    ws = new WebSocket("wss://livevoting.filmwinter.de/wss");
+    ws = new WebSocket("wss://filmwinter.de/wss");
     ws.onopen = () => {
         ws.send(JSON.stringify({
             type: "authenticate",
