@@ -2,12 +2,12 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const port = 3300;
+const port = 3000;
 const WebSocket = require('ws');
 const wsevents = require('./wsevents');
 
-/** * The socket connection will be opened in 3300 port. */
-const wss = new WebSocket.Server({port: 3300, path: "/wss"});
+/** * The socket connection will be opened in 3001 port. */
+const wss = new WebSocket.Server({port: 3001, path: "/wss"});
 wsevents.register(wss);
 
 const app = express();
