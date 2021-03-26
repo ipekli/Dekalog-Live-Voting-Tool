@@ -71,7 +71,7 @@ WebSocketClient.prototype.onclose = function(e){	console.log("WebSocketClient: c
 /** * This function defines the URL of the server. Change it with yours.
     * ws://url.com/wss */
 
-let ws = new WebSocketClient("ws://ipek.li/wss");
+let ws = new WebSocketClient("ws://ipek.li:3001/wss");
 
 
 ws.onmessage = event => {
