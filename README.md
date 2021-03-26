@@ -88,7 +88,7 @@ When you defined your server URL and your port in your repository, you can clone
 
 `npm install cors`
 
-`node**app.js**`
+`node app.js `
 
 The app will start on the defined port, f.e http://yourdomain.com:3000
 
