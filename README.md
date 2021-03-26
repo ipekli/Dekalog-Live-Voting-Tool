@@ -50,8 +50,6 @@ Specific documentation for the code and its functions can be found under these s
 - When a new state comes from admin side, make the required changes
 - Send the information what client clicks as answer to the admin panel
 
-# 2.0 Installing & Running Dekalog Voting Tool
-
 # Technical Requirements
 
 Any kind of server where you can install NodeJS and Nginx and work with WebSockets meets the requirements. We have tested with the following system and therefore we recommend it:
