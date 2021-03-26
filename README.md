@@ -67,8 +67,10 @@ The system wasn't tested for more than 1,000 people.
 
 You should have NodeJS and Node Packet Manager on your server. If you don't have it yet, run following commands on your server
 
-`sudo apt install nodejs`
-`sudo apt install npm`
+```bash
+sudo apt install nodejs
+sudo apt install npm
+```
 
 You can easily copy this repository to your git and make the following changes:
 
@@ -80,7 +82,7 @@ You can easily copy this repository to your git and make the following changes:
 
 When you defined your server URL and your port in your repository, you can clone and install it to your server with following commands:
 
-`git clone**yourrepositorylinkere**`
+`git clone yourrepositorylinkere `
 
 `npm install express`
 
